@@ -1,5 +1,4 @@
 from django.contrib import admin
-<<<<<<< HEAD
 from rango.models import Category, Page
 #from .models import Choice, Question
 
@@ -16,7 +15,7 @@ admin.site.register(Category,CategoryAdmin)
 
 # Register your models here.
 #admin.site.register()
-=======
+
 
 # Register your models here.
->>>>>>> 007098d90f8d7150dd6e76a93cba8f4c055e7ee9
+
