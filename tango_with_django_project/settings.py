@@ -63,11 +63,9 @@ ROOT_URLCONF = 'tango_with_django_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-<<<<<<< HEAD
+
         'DIRS': [TEMPLATES_DIR, ],
-=======
         'DIRS': [TEMPLATES_DIR,],
->>>>>>> 007098d90f8d7150dd6e76a93cba8f4c055e7ee9
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -113,23 +111,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# Internationalization
-# https://docs.djangoproject.com/en/1.11/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
-
-TIME_ZONE = 'UTC'
-
-USE_I18N = True
-
-USE_L10N = True
-
-USE_TZ = True
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATICFILES_DIRS =[STATIC_DIR, ]
 STATIC_URL = '/static/'
