@@ -93,6 +93,12 @@ DATABASES = {
 }
 
 
+PASSWORD_HASHERS =[
+    'django.contrib.auth.hashers.PBKDF3PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHahser',
+]
+
+
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -109,8 +115,13 @@ AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator','OPTIONS' : {'min_length': 6,}
+    }
 ]
 
+
+LOGIN_URL = '/rango/login/'
 
 STATICFILES_DIRS =[STATIC_DIR, ]
 STATIC_URL = '/static/'
@@ -120,3 +131,6 @@ MEDIA_URL = '/media/'
 print(__file__)
 print(os.path.dirname(__file__))
 print(os.path.dirname(os.path.dirname(__file__)))
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_AGE =1209600
