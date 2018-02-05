@@ -15,6 +15,18 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+STATIC_DIR = os.path.join(BASE_DIR, 'static')
+MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+LOGIN_URL = '/rango/login/'
+TEMPLATE_DIR = os.path.join(BASE_DIR, 'templates')
+
+print(BASE_DIR)
+print(TEMPLATE_DIR)
+print(STATIC_DIR)
+print(MEDIA_DIR)
+
+
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -27,9 +39,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
-STATIC_DIR = os.path.join(BASE_DIR,'static')
-MEDIA_DIR = os.path.join(BASE_DIR, 'media')
+
 
 
 
@@ -64,8 +74,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
 
-        'DIRS': [TEMPLATES_DIR, ],
-        'DIRS': [TEMPLATES_DIR,],
+        'DIRS': [TEMPLATE_DIR, ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,14 +132,28 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LOGIN_URL = '/rango/login/'
 
-STATICFILES_DIRS =[STATIC_DIR, ]
-STATIC_URL = '/static/'
-MEDIA_ROOT = MEDIA_DIR
-MEDIA_URL = '/media/'
+
 
 print(__file__)
 print(os.path.dirname(__file__))
 print(os.path.dirname(os.path.dirname(__file__)))
 
+
+
+LANGUAGE_CODE = 'en-us'
+
+TIME_ZONE = 'UTC'
+
+USE_I18N = True
+
+USE_L10N = True
+
+USE_TZ = True
+
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 SESSION_COOKIE_AGE =1209600
+
+STATICFILES_DIRS =[STATIC_DIR, ]
+STATIC_URL = '/static/'
+MEDIA_ROOT = MEDIA_DIR
+MEDIA_URL = '/media/'
